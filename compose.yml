@@ -1,0 +1,53 @@
+version: "3"
+
+
+services:
+  server:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+      - 80:80
+      - 19132:19132/udp
+
+    environment:
+      EULA: true
+      TYPE: fabric
+
+      OVERRIDE_OPS: true
+      OPS: cyxmon
+
+      DIFFICULTY: hard
+      SPAWN_PROTECTION: 0
+      MOTD: §6Welcome to WashU Minecraft!
+      MAX_PLAYERS: 717
+      VIEW_DISTANCE: 8
+      SIMULATION_DISTANCE: 8
+      ENFORCE_SECURE_PROFILE: false
+
+      PATCH_DEFINITIONS: /data/patches.json
+
+      REMOVE_OLD_MODS: true
+      MODRINTH_ALLOWED_VERSION_TYPE: alpha
+      MODRINTH_PROJECTS: bluemap, dcintegration, fabric-api, geyser, floodgate, carpet, servux, lithium, ferrite-core, starlight, gca
+
+      MEMORY: 2G
+      USE_AIKAR_FLAGS: true
+
+      ENABLE_AUTOSTOP: true
+      AUTOSTOP_TIMEOUT_EST: 3600
+      AUTOSTOP_TIMEOUT_INIT: 86400
+
+    volumes:
+      - ./data:/data
+      - ./world:/data/world
+      - ./media/server-icon.png:/data/server-icon.png
+      - ./config/patches.json:/data/patches.json
+
+      - ./config/Discord-Integration.toml:/data/config/Discord-Integration.toml
+      - ./config/carpet.conf:/data/world/carpet.conf
+      - ./config/core.conf/:/data/config/bluemap/core.conf
+      - ./config/webserver.conf/:/data/config/bluemap/webserver.conf
+
+    tty: true
+    stdin_open: true
+    restart: unless-stopped

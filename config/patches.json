@@ -1,0 +1,21 @@
+{
+    "patches": [
+        {
+            "file": "/data/config/Geyser-Fabric/config.yml",
+            "ops": [
+                {
+                    "$set": {
+                        "path": "$.passthrough-motd",
+                        "value": true
+                    }
+                },
+                {
+                    "$set": {
+                        "path": "$.passthrough-player-counts",
+                        "value": true
+                    }
+                }
+            ]
+        }
+    ]
+}
