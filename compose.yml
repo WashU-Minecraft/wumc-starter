@@ -28,7 +28,18 @@ services:
 
       REMOVE_OLD_MODS: true
       MODRINTH_ALLOWED_VERSION_TYPE: alpha
-      MODRINTH_PROJECTS: bluemap, dcintegration, fabric-api, geyser, floodgate, carpet, servux, lithium, ferrite-core, starlight, gca
+      MODRINTH_PROJECTS: 
+        bluemap, 
+        dcintegration, 
+        fabric-api, 
+        geyser, 
+        floodgate, 
+        carpet, 
+        servux, 
+        lithium, 
+        ferrite-core, 
+        starlight, 
+        gca，
 
       MEMORY: 2G
       USE_AIKAR_FLAGS: true
