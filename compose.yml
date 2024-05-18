@@ -39,7 +39,7 @@ services:
         lithium, 
         ferrite-core, 
         starlight, 
-        gca，
+        gca
 
       MEMORY: 2G
       USE_AIKAR_FLAGS: true
