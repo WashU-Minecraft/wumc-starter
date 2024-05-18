@@ -50,6 +50,8 @@ services:
       - ./media/server-icon.png:/data/server-icon.png
       - ./config/patches.json:/data/patches.json
       - ./config/Discord-Integration.toml:/data/config/Discord-Integration.toml
+      - ./config/core.conf/:/data/config/bluemap/core.conf
+      - ./config/webserver.conf/:/data/config/bluemap/webserver.conf
 
     tty: true
     stdin_open: true
