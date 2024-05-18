@@ -12,7 +12,6 @@ services:
     environment:
       EULA: true
       TYPE: fabric
-      VERSION: 1.20.4
 
       OVERRIDE_OPS: true
       OPS: cyxmon
@@ -34,13 +33,9 @@ services:
         dcintegration, 
         fabric-api, 
         geyser, 
-        floodgate, 
-        carpet, 
-        servux, 
+        floodgate,
         lithium, 
-        ferrite-core, 
-        starlight, 
-        gca
+        ferrite-core
 
       MEMORY: 2G
       USE_AIKAR_FLAGS: true
@@ -54,11 +49,7 @@ services:
       - ./world:/data/world
       - ./media/server-icon.png:/data/server-icon.png
       - ./config/patches.json:/data/patches.json
-
       - ./config/Discord-Integration.toml:/data/config/Discord-Integration.toml
-      - ./config/carpet.conf:/data/world/carpet.conf
-      - ./config/core.conf/:/data/config/bluemap/core.conf
-      - ./config/webserver.conf/:/data/config/bluemap/webserver.conf
 
     tty: true
     stdin_open: true
