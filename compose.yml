@@ -12,6 +12,7 @@ services:
     environment:
       EULA: true
       TYPE: fabric
+      VERSION: 1.21
 
       OVERRIDE_OPS: true
       OPS: cyxmon
